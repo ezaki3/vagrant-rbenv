@@ -4,7 +4,7 @@
   user: vagrant
   become: yes
   vars:
-    ruby_version: "2.2.4"
+    ruby_version: "2.4.1"
     vagrant_home: "/home/vagrant"
     dbuser: "devuser"
     dbpass: "devpass"
