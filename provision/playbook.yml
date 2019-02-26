@@ -12,19 +12,20 @@
         name: Asia/Tokyo
 
     - name: packages install
-      apt: name={{ item }} update_cache=yes
-      with_items:
-        - git
-        - libreadline-dev
-        - libssl-dev
-        - zlib1g-dev
-        - build-essential
-        - nodejs
-        - npm
-        - sqlite3
-        - libsqlite3-dev
-        - libxml2-dev
-        - imagemagick
+      apt: name={{ packages }} update_cache=yes
+      vars:
+        packages:
+          - git
+          - libreadline-dev
+          - libssl-dev
+          - zlib1g-dev
+          - build-essential
+          - nodejs
+          - npm
+          - sqlite3
+          - libsqlite3-dev
+          - libxml2-dev
+          - imagemagick
 
     - stat: path=/usr/bin/node
       register: f
